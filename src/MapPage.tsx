@@ -1,8 +1,14 @@
 import React, { useEffect } from 'react';
 
+declare global {
+  interface Window {
+    kakao: any;
+  }
+}
+
 const { kakao } = window;
 
-const MapPage = () => {
+const MapPage: React.FC = () => {
   useEffect(() => {
     const container = document.getElementById('map');
     const options = {
