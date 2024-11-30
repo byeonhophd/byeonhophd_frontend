@@ -1,0 +1,48 @@
+:root {
+    --text-color: rgb(0, 0, 0);
+    --background-color: rgb(255, 255, 255);
+    --input-padding: 10px;
+    --button-padding: 10px 20px;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-font-smoothing: auto;
+  }
+  
+  .app-container {
+    padding-bottom: 60px; /* 탭 바 공간 확보 */
+  }
+  
+  .page-content {
+    padding: 20px;
+    min-height: calc(100vh - 60px); /* 탭 바 높이 제외 */
+    box-sizing: border-box;
+  }
+  
+  .input-form {
+    position: fixed;
+    bottom: 60px; /* 탭 바 위에 위치하도록 조정 */
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  input[type='text'] {
+    width: 70%;
+    padding: var(--input-padding);
+  }
+  
+  button {
+    padding: var(--button-padding);
+  }
