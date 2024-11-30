@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import './MapPage.css';
 
 declare global {
   interface Window {
@@ -29,9 +28,8 @@ const MapPage: React.FC = () => {
   }, []);
 
   return (
-    
     <div className="page-content">
-      <header className="settings-header">지도</header>
+      <h1>지도</h1>
       <div
         id="map"
         style={{ width: '500px', height: '500px' }}

@@ -1,0 +1,16 @@
+  /* 헤더 스타일 */
+  .settings-header {
+    position: fixed; /* 화면 맨 위에 고정 */
+    top: 0; /* 상단에서 0px */
+    left: 0; /* 왼쪽에서 0px */
+    width: 100%; /* 화면 전체 가로 */
+    height: 60px; /* 고정된 높이 */
+    background-color: #ffffff; /* 배경색 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 약간의 그림자 효과 */
+    font-size: 24px; /* 헤더 글자 크기 */
+    font-weight: bold;
+    color: #333333;
+    text-align: center;
+    line-height: 60px; /* 텍스트를 수직 중앙 정렬 */
+    z-index: 1000; /* 다른 요소보다 위에 표시 */
+  }
