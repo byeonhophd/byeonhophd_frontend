@@ -13,13 +13,13 @@ const MapPage: React.FC = () => {
   useEffect(() => {
     const container = document.getElementById('map');
     const options = {
-      center: new kakao.maps.LatLng(37.5665, 126.9780),
-      level: 3,
+      center: new kakao.maps.LatLng(37.5742, 126.9732),
+      level: 2,
     };
     const map = new kakao.maps.Map(container, options);
 
     // 마커가 표시될 위치
-    const markerPosition = new kakao.maps.LatLng(37.5665, 126.9780);
+    const markerPosition = new kakao.maps.LatLng(37.5744, 126.9730);
     // 마커 생성
     const marker = new kakao.maps.Marker({
       position: markerPosition,
