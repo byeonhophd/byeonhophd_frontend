@@ -4,7 +4,7 @@
   left: 0; /* 화면의 왼쪽 끝에 맞춤 */
   width: 100%; /* 가로 크기를 화면 전체로 */
   height: 60px; /* 높이 설정 */
-  background-color: #201e43; /* 배경색 */
+  background-color: #201E43; /* 배경색 */
   display: flex;
   justify-content: space-around; /* 탭 아이템 간 간격 균등 분배 */
   align-items: center; /* 세로 중앙 정렬 */
@@ -13,17 +13,15 @@
 }
 
 .tab {
+  color: white; /* 텍스트 색상 */
   text-decoration: none; /* 밑줄 제거 */
+  font-size: 16px; /* 텍스트 크기 */
   display: flex;
+  flex-direction: column; /* 아이콘과 텍스트 정렬 시 사용 */
   align-items: center; /* 아이콘과 텍스트 중앙 정렬 */
 }
 
-.tab-icon {
-  width: 24px;
-  height: 24px;
-  margin: 4px 0;
-}
-
-.active-tab .tab-icon {
-  filter: brightness(1.2); /* 활성화된 탭 아이콘 강조 */
+.active-tab {
+  font-weight: bold; /* 활성화된 탭 텍스트 굵게 */
+  text-decoration: underline; /* 활성화된 탭 밑줄 */
 }
