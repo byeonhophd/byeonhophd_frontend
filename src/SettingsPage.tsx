@@ -1,5 +1,7 @@
 import React from 'react';
-import './SettingsPage.css'; // CSS 파일을 별도로 관리한다고 가정
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
+import './SettingsPage.css';
 
 const Settings = () => {
   return (
@@ -8,7 +10,9 @@ const Settings = () => {
       
       <div className="settings-container">
         <div className="profile-section">
-          <div className="profile-image"></div>
+          <div className="profile-image">
+            <FontAwesomeIcon className="profile" icon={faUser} size="2x" />
+          </div>
           <h1 className="profile-name">김 시 민</h1>
         </div>
         

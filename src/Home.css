@@ -120,11 +120,18 @@ header h1 {
   border-radius: 8px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  flex-direction: column; /* Flexbox 방향을 세로로 설정 */
+  justify-content: space-between; /* 상단과 하단으로 간격 배치 */
+  padding: 16px;
   font-size: 16px;
   font-weight: bold;
   text-align: center;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card p {
+  font-size: 14px;
+  font-weight: normal;
 }
 
 /* 반응형 디자인 */

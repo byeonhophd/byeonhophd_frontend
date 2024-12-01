@@ -46,7 +46,9 @@
   height: 60px; /* 프로필 이미지 크기 축소 */
   border-radius: 50%;
   background-color: #ddd; /* 프로필 이미지 자리 표시자 색상 */
-  margin-right: 15px; /* 오른쪽 여백 축소 */
+  /* margin-right: 15px; 오른쪽 여백 축소 */
+  align-items: center;
+  justify-content: center;
   background-size: cover;
   background-position: center;
 }
