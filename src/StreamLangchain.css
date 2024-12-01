@@ -22,32 +22,35 @@ body {
   display: flex;
   flex-direction: column;
   height: calc(100vh - 60px); /* 탭 바 높이 제외 */
-  padding: 6rem 5rem 10rem; /* 상단과 좌우 여백 조정 */
+  padding-top: 80pt;  /* 상단과 좌우 여백 조정 */
   box-sizing: border-box;
 }
 
 .messages-container {
   overflow-y: auto;
-  max-height: calc(100vh - 3% - 160px); /* 탭 바와 입력 폼 높이 제외 */
+  word-wrap: break-word;
+  word-break: break-word;
+  white-space: pre-wrap;
+  max-height: calc(100vh - 160px); /* 탭 바와 입력 폼 높이 제외 */
   display: flex;
   flex-direction: column;
   align-items: center;
   position: absolute;
   top: 0;
-  bottom: 100px; /* 입력 폼과 탭 바를 위한 공간 확보 */
+  bottom: 80px; /* 입력 폼과 탭 바를 위한 공간 확보 */
   width: 100%;
-  padding: 0 5rem;
+  padding: 5pt;
   box-sizing: border-box;
 }
 
 .message {
-  width: 60%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   padding: 1rem;
   border-radius: 0.5rem;
-  background-color: #444; /* 배경색 추가 */
+  background-color: #ffffff; /* 배경색 추가 */
 }
 
 .message strong {
@@ -72,7 +75,7 @@ body {
 }
 
 input[type="text"] {
-  width: 70%;
+  width: 80%;
   padding: var(--input-padding);
 }
 

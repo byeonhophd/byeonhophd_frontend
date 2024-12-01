@@ -21,8 +21,6 @@ const SearchPage: React.FC = () => {
           검색
         </button>
       </div>
-
-      <p>현재 준비중입니다.</p>
     </div>
   );
 };
