@@ -11,33 +11,8 @@ declare global {
 
 const { kakao } = window;
 
-// LawFirm 인터페이스 정의
-interface LawFirm {
-  id: number;
-  name: string;
-  latitude: number;
-  longitude: number;
-  description: string;
-}
-
-// 법무법인 데이터 예시
-const lawFirms: LawFirm[] = [
-  {
-    id: 1,
-    name: '법무법인 김앤장',
-    latitude: 37.5744,
-    longitude: 126.9730,
-    description: '대한민국 최대 로펌 중 하나입니다.',
-  },
-  {
-    id: 2,
-    name: '법무법인 태평양',
-    latitude: 37.5750,
-    longitude: 126.9750,
-    description: '다양한 분야에서 전문성을 갖춘 로펌입니다.',
-  },
-  // 추가 법무법인 데이터를 여기에 추가하세요
-];
+// 법무법인 인터페이스 및 데이터 가져오기
+import { LawFirm, lawFirms } from './lawFirms';
 
 // Overlay 컴포넌트 정의
 const Overlay: React.FC<{
@@ -70,7 +45,7 @@ const MapPage: React.FC = () => {
     }
 
     const options = {
-      center: new kakao.maps.LatLng(37.5742, 126.9732),
+      center: new kakao.maps.LatLng(37.4918, 127.0075),
       level: 3,
     };
     const map = new kakao.maps.Map(container, options);
