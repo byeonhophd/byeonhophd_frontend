@@ -32,7 +32,7 @@ const StreamLangchain: React.FC = () => {
     }, [responses]);
 
     const setupWebSocket = () => {
-        ws.current = new WebSocket('ws://127.0.0.1:8000/ws/chat/');
+        ws.current = new WebSocket('ws://www.example.com/ws/chat/');
 
         ws.current.onopen = () => {
             console.log("WebSocket connected!");
