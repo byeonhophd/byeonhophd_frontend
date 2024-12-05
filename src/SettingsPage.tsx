@@ -1,9 +1,7 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser } from '@fortawesome/free-solid-svg-icons';
 import './SettingsPage.css';
 
-const Settings = () => {
+const Settings: React.FC = () => {
   return (
     <div className="settings-page">
       <div className="settings-header">환경설정</div>
@@ -11,7 +9,6 @@ const Settings = () => {
       <div className="settings-container">
         <div className="profile-section">
           <div className="profile-image">
-            <FontAwesomeIcon className="profile" icon={faUser} size="2x" />
           </div>
           <h1 className="profile-name">김 시 민</h1>
         </div>
