@@ -14,6 +14,9 @@ const { kakao } = window;
 // 법무법인 인터페이스 및 데이터 가져오기
 import { LawFirm, lawFirms } from './lawFirms';
 
+// 최대 마커 개수 상수 정의
+const MAX_MARKERS = 300; // 원하는 최대 마커 수로 설정
+
 // Overlay 컴포넌트 정의
 const Overlay: React.FC<{
   lawFirm: LawFirm | null;
@@ -34,8 +37,8 @@ const Overlay: React.FC<{
 };
 
 const MapPage: React.FC = () => {
-  const [selectedLawFirm, setSelectedLawFirm] = useState<LawFirm | null>(lawFirms[0]);
-  const [isOverlayVisible, setIsOverlayVisible] = useState(true); // 기본적으로 오버레이를 표시
+  const [selectedLawFirm, setSelectedLawFirm] = useState<LawFirm | null>(null);
+  const [isOverlayVisible, setIsOverlayVisible] = useState(false); // 기본적으로 오버레이를 숨김
 
   useEffect(() => {
     const container = document.getElementById('map');
@@ -50,8 +53,11 @@ const MapPage: React.FC = () => {
     };
     const map = new kakao.maps.Map(container, options);
 
+    // 마커 개수 제한
+    const markersToRender = lawFirms.slice(0, MAX_MARKERS);
+
     // 법무법인별 마커 생성 및 클릭 이벤트 추가
-    lawFirms.forEach((firm) => {
+    markersToRender.forEach((firm) => {
       const markerPosition = new kakao.maps.LatLng(firm.latitude, firm.longitude);
       const marker = new kakao.maps.Marker({
         position: markerPosition,
