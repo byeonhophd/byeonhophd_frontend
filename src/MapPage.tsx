@@ -84,7 +84,7 @@ const MapPage: React.FC = () => {
 
   return (
     <div className="page-content">
-      <header className="settings-header">지도</header>
+      <header className="settings-header">법률 상담소 찾기</header>
       <div
         id="map"
         style={{ width: '100%', height: '100vh' }}
