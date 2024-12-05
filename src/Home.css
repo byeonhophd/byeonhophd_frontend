@@ -113,25 +113,69 @@ header h1 {
 
 .card {
   flex: 0 0 auto;
-  width: 30%; /* 카드의 가로 너비를 30%로 축소 */
-  height: 200px; /* 카드의 세로 높이를 200px로 증가 */
-  background-color: #f9f9f9;
+  width: 30%; /* 카드의 가로 너비를 30%로 유지 */
+  height: 200px; /* 카드의 세로 높이를 200px로 유지 */
+  background-color: #d7d7d7;
   color: #000000;
   border-radius: 8px;
   display: flex;
-  align-items: center;
-  flex-direction: column; /* Flexbox 방향을 세로로 설정 */
-  justify-content: space-between; /* 상단과 하단으로 간격 배치 */
+  flex-direction: column;
+  align-items: flex-start; /* 수평 정렬을 왼쪽으로 변경 */
+  justify-content: flex-start; /* 수직 정렬을 위쪽으로 변경 */
   padding: 16px;
   font-size: 16px;
   font-weight: bold;
-  text-align: center;
+  text-align: left; /* 텍스트 정렬을 왼쪽으로 변경 */
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
 }
 
-.card p {
+/* 카드 내부의 <a> 태그 스타일 수정 */
+.card a {
+  text-decoration: none; /* 밑줄 제거 */
+  color: #000000; /* 텍스트 색상을 검정색으로 고정 */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* 수평 정렬을 왼쪽으로 변경 */
+  justify-content: flex-start; /* 수직 정렬을 위쪽으로 변경 */
+  padding: 8px 0; /* 상하 패딩 추가 */
+  box-sizing: border-box;
+}
+
+.card a:hover {
+  text-decoration: none; /* 호버 시에도 밑줄 제거 */
+  color: #000000; /* 호버 시에도 색상 유지 */
+}
+
+/* 카드 내부의 제목과 설명 스타일 */
+.card h3 {
+  margin: 0 0 8px 0; /* 아래쪽 마진 추가 */
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.card .card_title {
+  height: 40%;
+}
+
+.card .category {
+  margin: 0 0 8px 0; /* 아래쪽 마진 추가 */
   font-size: 14px;
-  font-weight: normal;
+  color: #000000; /* 카테고리 텍스트 색상 변경 */
+}
+
+.card .subcategory,
+.card .description {
+  margin: 0;
+  font-size: 12px;
+  color: #333333; /* 설명 텍스트 색상 변경 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* 최대 3줄로 제한 */
+  -webkit-box-orient: vertical;
 }
 
 /* 반응형 디자인 */
@@ -149,7 +193,7 @@ header h1 {
   }
 
   .card {
-    width: 40%; /* 모바일에서 카드 너비를 80%로 조정 */
-    height: 200px; /* 모바일에서 카드 높이를 150px로 조정 */
+    width: 40%; /* 모바일에서 카드 너비를 40%로 조정 */
+    height: 200px; /* 모바일에서 카드 높이를 200px로 유지 */
   }
 }
