@@ -25,11 +25,6 @@ const StreamLangchain: React.FC = () => {
 
     const location = useLocation();
     const state = location.state as MessageState;
-    console.log("Location state:", state);
-
-    useEffect(() => {
-        console.log("Responses updated:", responses);
-    }, [responses]);
 
     const setupWebSocket = () => {
         ws.current = new WebSocket('ws://www.example.com/ws/chat/');
@@ -136,6 +131,8 @@ const StreamLangchain: React.FC = () => {
 
     return (
         <div className="chat-container">
+            <header className="top-bar">
+            </header>
             <div className="messages-container">
                 {responses.map((response, index) => renderMessage(response, index))}
                 <div ref={messagesEndRef} />
