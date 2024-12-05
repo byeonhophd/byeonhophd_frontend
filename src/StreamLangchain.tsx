@@ -29,7 +29,7 @@ const StreamLangchain: React.FC = () => {
   const state = location.state as MessageState;
 
   const setupWebSocket = () => {
-    const wsURL = `${import.meta.env.VITE_WS_URL}/ws/chat/`;
+    const wsURL = `${import.meta.env.VITE_WS_BASE_URL}/ws/chat/`;
     ws.current = new WebSocket(wsURL);
 
     ws.current.onopen = () => {

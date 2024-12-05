@@ -20,7 +20,8 @@ const SearchPage: React.FC = () => {
       return;
     }
     setError('');
-    axios.get('http://127.0.0.1:8000/api/search/', {  // 필요한 경우 URL을 조정하세요
+    const apiUrl = `${import.meta.env.VITE_BE_BASE_URL}/api/search/`;
+    axios.get(apiUrl, {
       params: {
         q: searchQuery
       }

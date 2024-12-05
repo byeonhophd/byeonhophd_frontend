@@ -61,7 +61,6 @@ const Home: React.FC = () => {
       setLoading(true);
       try {
         const apiUrl = `${import.meta.env.VITE_BE_BASE_URL}/api/rss`;
-        console.log(apiUrl)
         const response = await fetch(apiUrl);
         
         if (!response.ok) {
