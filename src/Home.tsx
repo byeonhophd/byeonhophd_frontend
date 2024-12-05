@@ -60,7 +60,8 @@ const Home: React.FC = () => {
     const fetchFeedData = async () => {
       setLoading(true);
       try {
-        const apiUrl = `${import.meta.env.VITE_SOME_KEY}/api/rss`;
+        const apiUrl = `${import.meta.env.VITE_BE_BASE_URL}/api/rss`;
+        console.log(apiUrl)
         const response = await fetch(apiUrl);
         
         if (!response.ok) {
