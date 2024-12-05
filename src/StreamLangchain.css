@@ -108,6 +108,7 @@ input[type="text"] {
 }
 
 button {
+  width: 12px;
   padding: var(--button-padding);
   margin-left: 10px; /* 입력 필드와 버튼 사이 간격 추가 */
   border: none;
@@ -115,6 +116,9 @@ button {
   color: white;
   border-radius: 4px;
   cursor: pointer;
+}
+button .send-button {
+  margin-left: -8px;
 }
 
 button:hover {
