@@ -26,7 +26,15 @@ const SearchPage: React.FC = () => {
       }
     })
     .then(response => {
-      setResults(response.data);
+      console.log('API 응답 데이터:', response.data); // 디버깅용 로그
+      // 응답 데이터 구조에 따라 아래를 수정하세요
+      if (Array.isArray(response.data)) {
+        setResults(response.data);
+      } else if (Array.isArray(response.data.clauses)) {
+        setResults(response.data.clauses);
+      } else {
+        setError('예상치 못한 응답 형식입니다.');
+      }
     })
     .catch(error => {
       console.error('검색 중 오류가 발생했습니다!', error);
@@ -55,7 +63,7 @@ const SearchPage: React.FC = () => {
       {/* 검색 결과 */}
       <div className="search-results">
         {error && <p className="error">{error}</p>}
-        {results.map((clause, index) => (
+        {Array.isArray(results) && results.map((clause, index) => (
           <div key={index} className="clause">
             <h3>{clause.identifier}</h3>
             <p>{clause.content}</p>
