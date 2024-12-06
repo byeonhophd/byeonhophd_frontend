@@ -42,11 +42,12 @@
 
 /* 프로필 이미지 스타일 */
 .profile-image {
+  display: flex;
   width: 60px; /* 프로필 이미지 크기 축소 */
   height: 60px; /* 프로필 이미지 크기 축소 */
   border-radius: 50%;
   background-color: #ddd; /* 프로필 이미지 자리 표시자 색상 */
-  /* margin-right: 15px; 오른쪽 여백 축소 */
+  margin-right: 15px;
   align-items: center;
   justify-content: center;
   background-size: cover;
@@ -86,14 +87,14 @@
 .guide-item {
   list-style: none;
   padding: 6px 0; /* 위아래 패딩 추가 축소 */
-  border-bottom: 1px solid #e0e0e0;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
-.info-item:last-child,
-.guide-item:last-child {
-  border-bottom: none;
+/* 리스트 부모 요소 스타일 */
+ul, ol {
+  padding: 0; /* 리스트 내부 여백 제거 */
+  margin: 0; /* 외부 여백 제거 */
 }
 
 .info-item:hover,
@@ -119,6 +120,7 @@
     margin-right: 10px; /* 오른쪽 여백 추가 축소 */
     width: 50px; /* 프로필 이미지 크기 추가 축소 */
     height: 50px; /* 프로필 이미지 크기 추가 축소 */
+    display: flex;
   }
 
   .profile-name {
