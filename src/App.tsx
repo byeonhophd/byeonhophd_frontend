@@ -7,6 +7,7 @@ import MapPage from './MapPage';
 import SettingsPage from './SettingsPage';
 import TabBar from './TabBar';
 import SplashScreen from './SplashScreen';
+import AnnouncementsPage from './AnnouncementsPage';
 import './App.css';
 
 const App: React.FC = () => {
@@ -34,6 +35,7 @@ const App: React.FC = () => {
               <Route path="/map" element={<MapPage />} />
               <Route path="/search" element={<SearchPage />} />
               <Route path="/settings" element={<SettingsPage />} />
+              <Route path="/announcements" element={<AnnouncementsPage />} />
             </Routes>
             <TabBar />
           </div>
