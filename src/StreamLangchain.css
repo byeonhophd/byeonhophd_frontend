@@ -50,11 +50,10 @@ body {
 
 /* 메시지 컨테이너 수정 */
 .messages-container {
-  overflow-y: auto;
+  overflow: scroll;
   word-wrap: break-word;
   word-break: break-word;
   white-space: pre-wrap;
-  max-height: calc(100vh - 180px); /* 상단 바와 입력 폼 높이 제외 */
   display: flex;
   flex: 1;
   flex-direction: column;
